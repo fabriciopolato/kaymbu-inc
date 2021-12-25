@@ -8,6 +8,7 @@ export const Button = styled.button.attrs({
   border: 1px solid #ddd;
   background-image: linear-gradient(#fcfcfc, #e7e7e7);
   padding: 0.5rem 0.8rem;
+  cursor: pointer;
 
   display: flex;
   align-items: center;

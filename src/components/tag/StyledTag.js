@@ -1,14 +1,9 @@
 import styled from "styled-components";
 
-export const TagContainer = styled.div.attrs({
-  className: "tag-container",
-})`
-  border: 1px solid #ddd;
-`;
-
 export const Tag = styled.div.attrs({
   className: "tag",
 })`
+  border: 1px solid #ddd;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -20,6 +15,15 @@ export const Left = styled.div.attrs({
 })`
   display: flex;
   align-items: center;
+
+  label {
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    cursor: pointer;
+    margin: 0 1.8px;
+  }
 `;
 
 export const Icon = styled.div.attrs({
