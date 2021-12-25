@@ -2,24 +2,28 @@ import { useState } from "react";
 
 import { TagPicker } from "./components/tagpicker/TagPicker";
 import { allTags } from "./seed";
+import { sortAlphaNum } from "./utils/sortAlphaNum";
 
 const App = () => {
   const [selectedTags, setSelectedTags] = useState([]);
-  const [selectedFolders, setSelectedFolders] = useState([]);
 
-  const onTagSelectionChange = (tag) => {
+  const onTagSelectionChange = (input) => {
+    const tag = allTags.filter((t) => t._id === input.target.id)[0];
+
     if (selectedTags.includes(tag)) {
-      setSelectedTags(selectedTags.filter((t) => t !== tag));
+      setSelectedTags(selectedTags.filter((t) => t._id !== tag._id));
     } else {
       setSelectedTags([...selectedTags, tag]);
     }
   };
 
+  console.log(selectedTags);
+  const sortedTags = allTags.sort(sortAlphaNum);
+
   return (
     <TagPicker
-      tags={allTags}
+      tags={sortedTags}
       selectedTags={selectedTags}
-      selectedFolders={selectedFolders}
       onTagSelectionChange={onTagSelectionChange}
     />
   );
