@@ -1,14 +1,35 @@
 export const allTags = [
   {
-    _id: "f1",
-    name: "Folder 1",
+    _id: "t4",
+    name: "Tag 4",
+    isFolder: false,
+    parent: "f1",
+    ancestors: ["f1"],
+  },
+  {
+    _id: "t13",
+    name: "Tag 21",
+    isFolder: false,
+    parent: "f1",
+    ancestors: ["f1"],
+  },
+  {
+    _id: "t24",
+    name: "Tag 10",
+    isFolder: false,
+    parent: "f1",
+    ancestors: ["f1"],
+  },
+  {
+    _id: "f2",
+    name: "Folder 2",
     isFolder: true,
     parent: null,
     ancestors: [],
   },
   {
-    _id: "f2",
-    name: "Folder 2",
+    _id: "f1",
+    name: "Folder 1",
     isFolder: true,
     parent: null,
     ancestors: [],
@@ -65,13 +86,6 @@ export const allTags = [
   {
     _id: "t3",
     name: "Tag 3",
-    isFolder: false,
-    parent: "f1",
-    ancestors: ["f1"],
-  },
-  {
-    _id: "t4",
-    name: "Tag 4",
     isFolder: false,
     parent: "f1",
     ancestors: ["f1"],
