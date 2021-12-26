@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# KAYMBU INC - TAGPICKER COMPONENT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tag Picker component created for Kaymbu Inc challenge
+
+![alt text](https://media.giphy.com/media/2vtTrybXhLvE1iVCQj/giphy.gif "TagPicker Gif")
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Installs all project dependencies
 
 ### `npm start`
 

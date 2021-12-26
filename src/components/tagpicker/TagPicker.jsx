@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 
 import { Tag, Button, ArrowLeft } from "../";
 
+import { sortAlphaNum } from "../../utils/sortAlphaNum";
+
 import * as Styled from "./StyledTagPicker";
 
 export const TagPicker = ({ tags, selectedTags, onTagSelectionChange }) => {
   const [selectedFolders, setSelectedFolders] = useState([]);
+
+  const sortedTags = tags.sort(sortAlphaNum);
 
   useEffect(() => {
     setSelectedFolders(
@@ -16,7 +20,7 @@ export const TagPicker = ({ tags, selectedTags, onTagSelectionChange }) => {
   const hasAnyFolderSelected = selectedFolders.length > 0;
   const lastSelectedFolder = selectedFolders[selectedFolders.length - 1];
 
-  const displayedTags = tags.filter((tag) => {
+  const displayedTags = sortedTags.filter((tag) => {
     if (!lastSelectedFolder) {
       return tag.parent === null;
     }
