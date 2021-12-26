@@ -48,8 +48,8 @@ export const TagPicker = ({ tags, selectedTags, onTagSelectionChange }) => {
         <Styled.BadgeContainer>
           {selectedTags
             .filter((tag) => !tag.isFolder)
-            .map((t) => (
-              <Styled.Badge key={t._id}>{t.name}</Styled.Badge>
+            .map((tag) => (
+              <Styled.Badge key={tag._id}>{tag.name}</Styled.Badge>
             ))}
         </Styled.BadgeContainer>
       </Styled.TagPickerBody>

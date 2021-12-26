@@ -5,10 +5,10 @@ import { TagPicker } from "./components";
 import { allTags } from "./seed";
 import { sortAlphaNum } from "./utils/sortAlphaNum";
 
+const sortedTags = allTags.sort(sortAlphaNum);
+
 const App = () => {
   const [selectedTags, setSelectedTags] = useState([]);
-
-  const sortedTags = allTags.sort(sortAlphaNum);
 
   const onTagSelectionChange = (tagId) => {
     const tag = sortedTags.filter((t) => t._id === tagId)[0];
