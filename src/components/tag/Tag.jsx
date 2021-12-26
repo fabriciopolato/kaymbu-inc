@@ -5,7 +5,11 @@ import * as Styled from "./StyledTag";
 
 export const Tag = ({ tag, selected, onTagSelectionChange }) => {
   return (
-    <Styled.Tag id={tag._id} onClick={() => onTagSelectionChange(tag._id)}>
+    <Styled.Tag
+      id={tag._id}
+      onClick={() => onTagSelectionChange(tag._id)}
+      data-testid="tag-item"
+    >
       <Styled.Left>
         <Styled.Icon>
           {!tag.isFolder ? (

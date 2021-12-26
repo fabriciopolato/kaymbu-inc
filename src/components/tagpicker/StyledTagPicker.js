@@ -9,11 +9,12 @@ export const TagPickerContainer = styled.div.attrs({
   margin: 1.5rem;
 `;
 
-export const TagPickerHeader = styled.div.attrs({
+export const TagPickerHeader = styled.h1.attrs({
   className: "tag-picker-header",
 })`
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
+  margin: 0;
   background-image: linear-gradient(#f5f4f5, #e7e7e7);
   border-bottom: 1px solid #ddd;
 `;
