@@ -1,14 +1,17 @@
 import { useState } from "react";
 
-import { TagPicker } from "./components/tagpicker/TagPicker";
+import { TagPicker } from "./components";
+
 import { allTags } from "./seed";
 import { sortAlphaNum } from "./utils/sortAlphaNum";
 
 const App = () => {
   const [selectedTags, setSelectedTags] = useState([]);
 
-  const onTagSelectionChange = (input) => {
-    const tag = allTags.filter((t) => t._id === input.target.id)[0];
+  const sortedTags = allTags.sort(sortAlphaNum);
+
+  const onTagSelectionChange = (tagId) => {
+    const tag = sortedTags.filter((t) => t._id === tagId)[0];
 
     if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter((t) => t._id !== tag._id));
@@ -16,9 +19,6 @@ const App = () => {
       setSelectedTags([...selectedTags, tag]);
     }
   };
-
-  console.log(selectedTags);
-  const sortedTags = allTags.sort(sortAlphaNum);
 
   return (
     <TagPicker

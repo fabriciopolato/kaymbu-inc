@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Tag } from "../tag/Tag";
-import { Button } from "../button/Button";
-import { ArrowLeft } from "../arrowleft/StyledArrowLeft";
+import { Tag, Button, ArrowLeft } from "../";
 
 import * as Styled from "./StyledTagPicker";
 
