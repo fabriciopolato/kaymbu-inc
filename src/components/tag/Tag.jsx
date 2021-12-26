@@ -1,6 +1,7 @@
-import * as Styled from "./StyledTag";
 import { FaFolder } from "react-icons/fa";
 import { MdKeyboardArrowRight } from "react-icons/md";
+
+import * as Styled from "./StyledTag";
 
 export const Tag = ({ tag, selected, onTagSelectionChange }) => {
   return (
